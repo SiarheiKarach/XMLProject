@@ -28,6 +28,8 @@ public class TouristVoucherXMLCreator {
 
   private static final Logger logger = LogManager.getLogger();
   private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ISO_INSTANT;
+  private static final String XML_NAMESPACE = "http://www.karach.com/tourist-voucher";
+  private static final String XSD_SCHEMA_LOCATION = "TouristVoucher.xsd";
 
   public static void createXmlDocument() {
     try {
@@ -35,16 +37,17 @@ public class TouristVoucherXMLCreator {
       DocumentBuilder builder = factory.newDocumentBuilder();
       Document document = builder.newDocument();
 
-      Element touristVouchersElement = document.createElement("TouristVouchers");
-      document.appendChild(touristVouchersElement);
+      Element rootElement = document.createElementNS(XML_NAMESPACE, "TouristVouchers");
+      rootElement.setAttribute("xmlns:xsi", "http://www.w3.org/2001/XMLSchema-instance");
+      rootElement.setAttribute("xsi:schemaLocation", XML_NAMESPACE + " " + XSD_SCHEMA_LOCATION);
+      document.appendChild(rootElement);
 
       TouristVoucher vacation = new TouristVoucherBuilder()
               .generateRandomId()
               .setCurrentDateTime()
               .setType("vacation")
               .setCountry("Spain")
-              .setMinDays("7")
-              .setMaxDays("50")
+              .setDaysNights("7", "50")
               .setTransport("Plane")
               .setStars("5")
               .setFood("All Inclusive")
@@ -53,15 +56,14 @@ public class TouristVoucherXMLCreator {
               .setCost("5000")
               .setCurrency("EUR")
               .build();
-      addTouristVoucherElement(document, touristVouchersElement, vacation);
+      addTouristVoucherElement(document, rootElement, vacation);
 
       TouristVoucher excursion = new TouristVoucherBuilder()
               .generateRandomId()
               .setCurrentDateTime()
               .setType("excursion")
               .setCountry("Poland")
-              .setMinDays("2")
-              .setMaxDays("3")
+              .setDaysNights("2", "3")
               .setTransport("Bus")
               .setStars("2")
               .setFood("BB")
@@ -69,15 +71,14 @@ public class TouristVoucherXMLCreator {
               .setAmenities("included")
               .setCost("500")
               .build();
-      addTouristVoucherElement(document, touristVouchersElement, excursion);
+      addTouristVoucherElement(document, rootElement, excursion);
 
       TouristVoucher weekend = new TouristVoucherBuilder()
               .generateRandomId()
               .setCurrentDateTime()
               .setType("weekend")
               .setCountry("Spain")
-              .setMinDays("3")
-              .setMaxDays("4")
+              .setDaysNights("3", "4")
               .setTransport("Plane")
               .setStars("4")
               .setFood("HB")
@@ -85,15 +86,14 @@ public class TouristVoucherXMLCreator {
               .setAmenities("included")
               .setCost("3000")
               .build();
-      addTouristVoucherElement(document, touristVouchersElement, weekend);
+      addTouristVoucherElement(document, rootElement, weekend);
 
       TouristVoucher pilgrimage = new TouristVoucherBuilder()
               .generateRandomId()
               .setCurrentDateTime()
               .setType("pilgrimage")
               .setCountry("Israel")
-              .setMinDays("14")
-              .setMaxDays("21")
+              .setDaysNights("14", "21")
               .setTransport("Diverse")
               .setStars("3")
               .setFood("All Inclusive")
@@ -102,7 +102,7 @@ public class TouristVoucherXMLCreator {
               .setCost("10000")
               .setCurrency("ILS")
               .build();
-      addTouristVoucherElement(document, touristVouchersElement, pilgrimage);
+      addTouristVoucherElement(document, rootElement, pilgrimage);
 
       Transformer transformer = TransformerFactory.newInstance().newTransformer();
       transformer.setOutputProperty(OutputKeys.INDENT, "yes");
@@ -147,12 +147,11 @@ public class TouristVoucherXMLCreator {
   private static void addDaysNightsElement(Document document, Element parentElement, String minDays, String maxDays) {
     Element daysNightsElement = document.createElement("DaysNights");
 
-    int maxDaysValue = Integer.parseInt(maxDays);
+    int maxDaysValue = (maxDays != null) ? Integer.parseInt(maxDays) : 0;
     if (maxDaysValue > 30) {
       maxDaysValue = 30;
     }
-
-    daysNightsElement.setAttribute("MinDays", minDays);
+    daysNightsElement.setAttribute("MinDays", String.valueOf(minDays));
     daysNightsElement.setAttribute("MaxDays", String.valueOf(maxDaysValue));
     parentElement.appendChild(daysNightsElement);
   }

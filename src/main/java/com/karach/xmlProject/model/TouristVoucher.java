@@ -1,7 +1,5 @@
 package com.karach.xmlProject.model;
 
-import java.time.format.DateTimeFormatter;
-
 public class TouristVoucher {
   private String id;
   private String type;
@@ -17,7 +15,12 @@ public class TouristVoucher {
   private String currency;
   private String startDate;
 
-  // Геттеры и сеттеры
+  public void setHotelCharacteristics(String stars, String food, String roomType, String amenities) {
+    this.stars = stars;
+    this.food = food;
+    this.roomType = roomType;
+    this.amenities = amenities;
+  }
 
   public String getId() {
     return id;
@@ -47,15 +50,12 @@ public class TouristVoucher {
     return minDays;
   }
 
-  public void setMinDays(String minDays) {
-    this.minDays = minDays;
-  }
-
   public String getMaxDays() {
     return maxDays;
   }
 
-  public void setMaxDays(String maxDays) {
+  public void setDaysNights(String minDays) {
+    this.minDays = minDays;
     this.maxDays = maxDays;
   }
 
@@ -129,8 +129,8 @@ public class TouristVoucher {
             "id='" + id + '\'' +
             ", type='" + type + '\'' +
             ", country='" + country + '\'' +
-            ", minDays='" + minDays + '\'' +
-            ", maxDays='" + maxDays + '\'' +
+            ", minDays=" + minDays +
+            ", maxDays=" + maxDays +
             ", transport='" + transport + '\'' +
             ", stars='" + stars + '\'' +
             ", food='" + food + '\'' +

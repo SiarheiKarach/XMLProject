@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.karach.com/tourist-voucher"
+           xmlns="http://www.karach.com/tourist-voucher"
+           elementFormDefault="qualified">
+
+   <xs:complexType name="TouristVoucherType">
+    <xs:sequence>
+      <xs:element name="Type" type="xs:string"/>
+      <xs:element name="Country" type="xs:string"/>
+      <xs:element name="DaysNights" type="DaysNightsType"/>
+      <xs:element name="Transport" type="xs:string"/>
+      <xs:element name="HotelCharacteristics" type="HotelCharacteristicsType"/>
+      <xs:element name="Cost" type="xs:string"/>
+      <xs:element name="StartDate" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:string" use="required"/>
+    <xs:attribute name="currency" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="DaysNightsType">
+    <xs:attribute name="MinDays" type="xs:string" use="required"/>
+    <xs:attribute name="MaxDays" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="HotelCharacteristicsType">
+    <xs:sequence>
+      <xs:element name="Stars" type="xs:string"/>
+      <xs:element name="Food" type="xs:string"/>
+      <xs:element name="RoomType" type="xs:string"/>
+      <xs:element name="Amenities" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="TouristVouchers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="TouristVoucher" type="TouristVoucherType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

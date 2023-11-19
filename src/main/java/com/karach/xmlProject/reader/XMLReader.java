@@ -20,7 +20,7 @@ public class XMLReader {
 
   public static void main(String[] args) {
     try {
-      File xmlFile = new File("TouristVoucher.xml");
+      File xmlFile = new File("./TouristVoucher.xml");
       DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
       DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
       Document doc = dBuilder.parse(xmlFile);
@@ -50,8 +50,8 @@ public class XMLReader {
               .setCurrentDateTime()
               .setType(getElementTextContent(element, "Type"))
               .setCountry(getElementTextContent(element, "Country"))
-              .setMinDays(getElementTextContent(element, "MinDays"))
-              .setMaxDays(getElementTextContent(element, "MaxDays"))
+              .setDaysNights(getElementTextContent(element, "MinDays"),
+               getElementTextContent(element, "MaxDays"))
               .setTransport(getElementTextContent(element, "Transport"))
               .setStars(getElementTextContent(element, "Stars"))
               .setFood(getElementTextContent(element, "Food"))

@@ -45,13 +45,8 @@ public class TouristVoucherBuilder {
     return this;
   }
 
-  public TouristVoucherBuilder setMinDays(String minDays) {
-    touristVoucher.setMinDays(minDays);
-    return this;
-  }
-
-  public TouristVoucherBuilder setMaxDays(String maxDays) {
-    touristVoucher.setMaxDays(maxDays);
+  public TouristVoucherBuilder setDaysNights (String minDays, String maxDays) {
+    touristVoucher.setDaysNights(minDays);
     return this;
   }
 

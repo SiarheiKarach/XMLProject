@@ -1,0 +1,10 @@
+19:09:18.443 [main] INFO  com.karach.xmlProject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+19:09:52.399 [main] INFO  com.karach.xmlProject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+19:14:12.358 [main] INFO  com.karach.xmlProject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+19:43:14.260 [main] INFO  com.karach.xmlProject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+19:46:28.076 [main] INFO  com.karach.xmlProject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+20:20:39.147 [main] ERROR com.karach.xmlProject.reader.XMLReader - Error reading XML file
+java.lang.NullPointerException: Cannot invoke "org.w3c.dom.Node.getTextContent()" because the return value of "org.w3c.dom.NodeList.item(int)" is null
+	at com.karach.xmlProject.reader.XMLReader.getElementTextContent(XMLReader.java:71) ~[classes/:?]
+	at com.karach.xmlProject.reader.XMLReader.createTouristVoucherFromElement(XMLReader.java:55) ~[classes/:?]
+	at com.karach.xmlProject.reader.XMLReader.main(XMLReader.java:35) [classes/:?]

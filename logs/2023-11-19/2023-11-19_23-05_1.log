@@ -1,0 +1,13 @@
+23:00:42.561 [main] ERROR com.karach.xmlProject.reader.XMLReader - Error reading XML file
+org.xml.sax.SAXParseException: Premature end of file.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:262) ~[?:?]
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342) ~[?:?]
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206) ~[?:?]
+	at com.karach.xmlProject.reader.XMLReader.main(XMLReader.java:26) [classes/:?]
+23:05:06.698 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 897
+23:05:06.704 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: vacation
+23:05:06.705 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
+23:05:06.706 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 939
+23:05:06.706 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: excursion
+23:05:06.706 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Poland
+23:05:06.707 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 798

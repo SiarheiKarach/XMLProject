@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<TouristVouchers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.karach.com/tourist-voucher TouristVoucher.xsd" xmlns="http://www.karach.com/tourist-voucher">
+    <TouristVoucher currency="EUR" id="507">
+        <Type>vacation</Type>
+        <Country>Spain</Country>
+        <DaysNights MaxDays="0" MinDays="7"/>
+        <Transport>Plane</Transport>
+        <HotelCharacteristics>
+            <Stars>5</Stars>
+            <Food>All Inclusive</Food>
+            <RoomType>2</RoomType>
+            <Amenities>included</Amenities>
+        </HotelCharacteristics>
+        <Cost>5000</Cost>
+        <StartDate>2023-11-19T22:33:09.298344200Z</StartDate>
+    </TouristVoucher>
+    <TouristVoucher currency="USD" id="907">
+        <Type>excursion</Type>
+        <Country>Poland</Country>
+        <DaysNights MaxDays="0" MinDays="2"/>
+        <Transport>Bus</Transport>
+        <HotelCharacteristics>
+            <Stars>2</Stars>
+            <Food>BB</Food>
+            <RoomType>2</RoomType>
+            <Amenities>included</Amenities>
+        </HotelCharacteristics>
+        <Cost>500</Cost>
+        <StartDate>2023-11-19T22:33:09.311310300Z</StartDate>
+    </TouristVoucher>
+    <TouristVoucher currency="USD" id="121">
+        <Type>weekend</Type>
+        <Country>Spain</Country>
+        <DaysNights MaxDays="0" MinDays="3"/>
+        <Transport>Plane</Transport>
+        <HotelCharacteristics>
+            <Stars>4</Stars>
+            <Food>HB</Food>
+            <RoomType>3</RoomType>
+            <Amenities>included</Amenities>
+        </HotelCharacteristics>
+        <Cost>3000</Cost>
+        <StartDate>2023-11-19T22:33:09.311310300Z</StartDate>
+    </TouristVoucher>
+    <TouristVoucher currency="ILS" id="11">
+        <Type>pilgrimage</Type>
+        <Country>Israel</Country>
+        <DaysNights MaxDays="0" MinDays="14"/>
+        <Transport>Diverse</Transport>
+        <HotelCharacteristics>
+            <Stars>3</Stars>
+            <Food>All Inclusive</Food>
+            <RoomType>4</RoomType>
+            <Amenities>included</Amenities>
+        </HotelCharacteristics>
+        <Cost>10000</Cost>
+        <StartDate>2023-11-19T22:33:09.311310300Z</StartDate>
+    </TouristVoucher>
+</TouristVouchers>

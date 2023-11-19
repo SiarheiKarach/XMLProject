@@ -1,0 +1,12 @@
+23:07:50.064 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: weekend
+23:07:50.070 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
+23:07:50.070 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 928
+23:07:50.071 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: pilgrimage
+23:07:50.071 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Israel
+23:08:13.787 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 101
+23:08:13.790 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: vacation
+23:08:13.791 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
+23:08:13.791 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 462
+23:08:13.795 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: excursion
+23:08:13.796 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Poland
+23:08:13.796 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 864

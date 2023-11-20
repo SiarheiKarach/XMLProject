@@ -1,9 +1,8 @@
-package com.karach.xmlProject.model;
+package com.karach.xmlproject.model;
 
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class TouristVoucherBuilder {
@@ -23,15 +22,13 @@ public class TouristVoucherBuilder {
 
   public TouristVoucherBuilder generateRandomId() {
     Random random = new Random();
-    touristVoucher.setId(String.valueOf(random.nextInt(1, 1000)));
+    touristVoucher.setID(random.nextInt(1,1000));
     return this;
-
   }
 
   public TouristVoucherBuilder setCurrentDateTime() {
-    ZonedDateTime zonedDateTime = ZonedDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
-    DateTimeFormatter formatter = DateTimeFormatter.ISO_INSTANT;
-    touristVoucher.setStartDate(formatter.format(zonedDateTime));
+    ZonedDateTime now = Instant.now().atZone(ZoneId.systemDefault());
+    touristVoucher.setStartDate(now.format(TouristVoucher.getDateTimeFormatter()));
     return this;
   }
 
@@ -45,8 +42,13 @@ public class TouristVoucherBuilder {
     return this;
   }
 
-  public TouristVoucherBuilder setDaysNights (String minDays, String maxDays) {
-    touristVoucher.setDaysNights(minDays);
+  public TouristVoucherBuilder setMinDays(int minDays) {
+    touristVoucher.setMinDays(minDays);
+    return this;
+  }
+
+  public TouristVoucherBuilder setMaxDays(int maxDays) {
+    touristVoucher.setMaxDays(maxDays);
     return this;
   }
 
@@ -55,7 +57,7 @@ public class TouristVoucherBuilder {
     return this;
   }
 
-  public TouristVoucherBuilder setStars(String stars) {
+  public TouristVoucherBuilder setStars(int stars) {
     touristVoucher.setStars(stars);
     return this;
   }
@@ -65,7 +67,7 @@ public class TouristVoucherBuilder {
     return this;
   }
 
-  public TouristVoucherBuilder setRoomType(String roomType) {
+  public TouristVoucherBuilder setRoomType(RoomType roomType) {
     touristVoucher.setRoomType(roomType);
     return this;
   }
@@ -75,16 +77,16 @@ public class TouristVoucherBuilder {
     return this;
   }
 
-  public TouristVoucherBuilder setCost(String cost) {
+  public TouristVoucherBuilder setCost(float cost) {
     touristVoucher.setCost(cost);
     return this;
   }
 
-  public TouristVoucherBuilder setCurrency(String currency) {
+  public TouristVoucherBuilder setCurrency(Currency currency) {
     touristVoucher.setCurrency(currency);
     return this;
-
   }
+
   public TouristVoucher build() {
     return touristVoucher;
   }

@@ -1,12 +1,12 @@
-21:24:49.553 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Poland
-21:24:49.561 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 13
-21:24:49.561 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: weekend
-21:24:49.561 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
-21:24:49.561 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 767
-21:24:49.562 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: pilgrimage
-21:24:49.562 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Israel
-21:30:18.700 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 646
-21:30:18.703 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: vacation
-21:30:18.707 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
-21:30:18.708 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 926
-21:30:18.708 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: excursion
+21:24:49.553 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Poland
+21:24:49.561 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 13
+21:24:49.561 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: weekend
+21:24:49.561 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Spain
+21:24:49.561 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 767
+21:24:49.562 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: pilgrimage
+21:24:49.562 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Israel
+21:30:18.700 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 646
+21:30:18.703 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: vacation
+21:30:18.707 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Spain
+21:30:18.708 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 926
+21:30:18.708 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: excursion

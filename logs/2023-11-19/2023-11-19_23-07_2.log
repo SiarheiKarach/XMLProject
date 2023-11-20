@@ -1,12 +1,12 @@
-23:07:11.710 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: weekend
-23:07:11.719 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
-23:07:11.720 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 818
-23:07:11.720 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: pilgrimage
-23:07:11.720 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Israel
-23:07:50.057 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 321
-23:07:50.059 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: vacation
-23:07:50.059 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
-23:07:50.060 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 223
-23:07:50.064 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: excursion
-23:07:50.064 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Poland
-23:07:50.064 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 852
+23:07:11.710 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: weekend
+23:07:11.719 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Spain
+23:07:11.720 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 818
+23:07:11.720 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: pilgrimage
+23:07:11.720 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Israel
+23:07:50.057 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 321
+23:07:50.059 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: vacation
+23:07:50.059 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Spain
+23:07:50.060 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 223
+23:07:50.064 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: excursion
+23:07:50.064 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Poland
+23:07:50.064 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 852

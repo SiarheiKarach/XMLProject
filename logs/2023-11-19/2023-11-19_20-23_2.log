@@ -1,12 +1,12 @@
-20:23:25.765 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
-20:23:25.772 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 499
-20:23:25.772 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: pilgrimage
-20:23:25.772 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Israel
-20:23:47.155 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 295
-20:23:47.159 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: vacation
-20:23:47.160 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
-20:23:47.160 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 914
-20:23:47.161 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: excursion
-20:23:47.161 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Poland
-20:23:47.162 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 775
-20:23:47.162 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: weekend
+20:23:25.765 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Spain
+20:23:25.772 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 499
+20:23:25.772 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: pilgrimage
+20:23:25.772 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Israel
+20:23:47.155 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 295
+20:23:47.159 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: vacation
+20:23:47.160 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Spain
+20:23:47.160 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 914
+20:23:47.161 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: excursion
+20:23:47.161 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Poland
+20:23:47.162 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 775
+20:23:47.162 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: weekend

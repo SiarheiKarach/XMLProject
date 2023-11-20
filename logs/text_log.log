@@ -1,11 +1,3 @@
-23:33:33.879 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: vacation
-23:33:33.888 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
-23:33:33.888 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 261
-23:33:33.888 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: excursion
-23:33:33.889 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Poland
-23:33:33.889 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 422
-23:33:33.889 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: weekend
-23:33:33.889 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
-23:33:33.890 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 471
-23:33:33.890 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: pilgrimage
-23:33:33.890 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Israel
+20:47:15.119 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+20:47:15.278 [main] INFO  com.karach.xmlproject.validator.XmlValidator - Validation successful.
+20:47:15.278 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD

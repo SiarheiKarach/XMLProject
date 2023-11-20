@@ -1,9 +1,9 @@
-23:12:03.941 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: weekend
-23:12:03.948 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
-23:12:03.949 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 362
-23:12:03.949 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: pilgrimage
-23:12:03.949 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Israel
-23:18:09.672 [main] ERROR com.karach.xmlProject.reader.XMLReader - Error reading XML file
+23:12:03.941 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: weekend
+23:12:03.948 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Spain
+23:12:03.949 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 362
+23:12:03.949 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: pilgrimage
+23:12:03.949 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Israel
+23:18:09.672 [main] ERROR com.karach.xmlproject.reader.XMLReader - Error reading XML file
 java.io.FileNotFoundException: C:\Users\skarach.DESKTOP-TJ4Q3M8\IdeaProjects\XML Project\.\TouristVoucher.xml (Nie można odnaleźć określonego pliku)
 	at java.io.FileInputStream.open0(Native Method) ~[?:?]
 	at java.io.FileInputStream.open(FileInputStream.java:216) ~[?:?]
@@ -19,4 +19,4 @@ java.io.FileNotFoundException: C:\Users\skarach.DESKTOP-TJ4Q3M8\IdeaProjects\XML
 	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247) ~[?:?]
 	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342) ~[?:?]
 	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206) ~[?:?]
-	at com.karach.xmlProject.reader.XMLReader.main(XMLReader.java:26) [classes/:?]
+	at com.karach.xmlproject.reader.XMLReader.main(XMLReader.java:26) [classes/:?]

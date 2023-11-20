@@ -1,33 +1,39 @@
-package com.karach.xmlProject.model;
+package com.karach.xmlproject.model;
+
+import java.time.format.DateTimeFormatter;
 
 public class TouristVoucher {
-  private String id;
+  private int ID;
   private String type;
   private String country;
-  private String minDays;
-  private String maxDays;
+  private int minDays;
+  private int maxDays;
   private String transport;
-  private String stars;
+  private int stars;
   private String food;
-  private String roomType;
+  private RoomType roomType;
   private String amenities;
-  private String cost;
-  private String currency;
+  private float cost;
+  private Currency currency;
   private String startDate;
 
-  public void setHotelCharacteristics(String stars, String food, String roomType, String amenities) {
+  public static DateTimeFormatter getDateTimeFormatter() {
+    return DateTimeFormatter.ISO_INSTANT;
+  }
+
+  public void setHotelCharacteristics(int stars, String food, RoomType roomType, String amenities) {
     this.stars = stars;
     this.food = food;
     this.roomType = roomType;
     this.amenities = amenities;
   }
 
-  public String getId() {
-    return id;
+  public int getID() {
+    return ID;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void setID(int ID) {
+    this.ID = ID;
   }
 
   public String getType() {
@@ -46,16 +52,19 @@ public class TouristVoucher {
     this.country = country;
   }
 
-  public String getMinDays() {
+  public int getMinDays() {
     return minDays;
   }
 
-  public String getMaxDays() {
+  public void setMinDays(int minDays) {
+    this.minDays = minDays;
+  }
+
+  public int getMaxDays() {
     return maxDays;
   }
 
-  public void setDaysNights(String minDays) {
-    this.minDays = minDays;
+  public void setMaxDays(int maxDays) {
     this.maxDays = maxDays;
   }
 
@@ -67,11 +76,11 @@ public class TouristVoucher {
     this.transport = transport;
   }
 
-  public String getStars() {
+  public int getStars() {
     return stars;
   }
 
-  public void setStars(String stars) {
+  public void setStars(int stars) {
     this.stars = stars;
   }
 
@@ -83,11 +92,11 @@ public class TouristVoucher {
     this.food = food;
   }
 
-  public String getRoomType() {
+  public RoomType getRoomType() {
     return roomType;
   }
 
-  public void setRoomType(String roomType) {
+  public void setRoomType(RoomType roomType) {
     this.roomType = roomType;
   }
 
@@ -99,19 +108,19 @@ public class TouristVoucher {
     this.amenities = amenities;
   }
 
-  public String getCost() {
+  public float getCost() {
     return cost;
   }
 
-  public void setCost(String cost) {
+  public void setCost(float cost) {
     this.cost = cost;
   }
 
-  public String getCurrency() {
+  public Currency getCurrency() {
     return currency;
   }
 
-  public void setCurrency(String currency) {
+  public void setCurrency(Currency currency) {
     this.currency = currency;
   }
 
@@ -126,18 +135,18 @@ public class TouristVoucher {
   @Override
   public String toString() {
     return "TouristVoucher{" +
-            "id='" + id + '\'' +
+            "ID=" + ID +
             ", type='" + type + '\'' +
             ", country='" + country + '\'' +
             ", minDays=" + minDays +
             ", maxDays=" + maxDays +
             ", transport='" + transport + '\'' +
-            ", stars='" + stars + '\'' +
+            ", stars=" + stars +
             ", food='" + food + '\'' +
-            ", roomType='" + roomType + '\'' +
+            ", roomType=" + roomType +
             ", amenities='" + amenities + '\'' +
-            ", cost='" + cost + '\'' +
-            ", currency='" + currency + '\'' +
+            ", cost=" + cost +
+            ", currency=" + currency +
             ", startDate='" + startDate + '\'' +
             '}';
   }

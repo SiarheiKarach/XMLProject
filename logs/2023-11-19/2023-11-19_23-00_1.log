@@ -1,11 +1,11 @@
-22:55:28.941 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Poland
-22:55:28.949 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 942
-22:55:28.949 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: weekend
-22:55:28.949 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Spain
-22:55:28.949 [main] INFO  com.karach.xmlProject.reader.XMLReader - Tourist Voucher ID: 587
-22:55:28.949 [main] INFO  com.karach.xmlProject.reader.XMLReader - Type: pilgrimage
-22:55:28.949 [main] INFO  com.karach.xmlProject.reader.XMLReader - Country: Israel
-22:58:36.962 [main] ERROR com.karach.xmlProject.reader.XMLReader - Error reading XML file
+22:55:28.941 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Poland
+22:55:28.949 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 942
+22:55:28.949 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: weekend
+22:55:28.949 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Spain
+22:55:28.949 [main] INFO  com.karach.xmlproject.reader.XMLReader - Tourist Voucher ID: 587
+22:55:28.949 [main] INFO  com.karach.xmlproject.reader.XMLReader - Type: pilgrimage
+22:55:28.949 [main] INFO  com.karach.xmlproject.reader.XMLReader - Country: Israel
+22:58:36.962 [main] ERROR com.karach.xmlproject.reader.XMLReader - Error reading XML file
 java.io.FileNotFoundException: C:\Users\skarach.DESKTOP-TJ4Q3M8\IdeaProjects\XML Project\.\TouristVoucher.xml (Nie można odnaleźć określonego pliku)
 	at java.io.FileInputStream.open0(Native Method) ~[?:?]
 	at java.io.FileInputStream.open(FileInputStream.java:216) ~[?:?]
@@ -21,4 +21,4 @@ java.io.FileNotFoundException: C:\Users\skarach.DESKTOP-TJ4Q3M8\IdeaProjects\XML
 	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:247) ~[?:?]
 	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:342) ~[?:?]
 	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:206) ~[?:?]
-	at com.karach.xmlProject.reader.XMLReader.main(XMLReader.java:26) [classes/:?]
+	at com.karach.xmlproject.reader.XMLReader.main(XMLReader.java:26) [classes/:?]

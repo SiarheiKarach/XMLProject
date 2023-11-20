@@ -1,7 +1,10 @@
-package com.karach.xmlProject.creator;
+package com.karach.xmlproject.creator;
 
-import com.karach.xmlProject.model.TouristVoucher;
-import com.karach.xmlProject.model.TouristVoucherBuilder;
+import com.karach.xmlproject.exception.TouristVoucherException;
+import com.karach.xmlproject.model.Currency;
+import com.karach.xmlproject.model.RoomType;
+import com.karach.xmlproject.model.TouristVoucher;
+import com.karach.xmlproject.model.TouristVoucherBuilder;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.w3c.dom.Document;
@@ -22,7 +25,6 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Random;
 
 public class TouristVoucherXMLCreator {
 
@@ -31,7 +33,7 @@ public class TouristVoucherXMLCreator {
   private static final String XML_NAMESPACE = "http://www.karach.com/tourist-voucher";
   private static final String XSD_SCHEMA_LOCATION = "TouristVoucher.xsd";
 
-  public static void createXmlDocument() {
+  public static void createXmlDocument() throws TouristVoucherException {
     try {
       DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
       DocumentBuilder builder = factory.newDocumentBuilder();
@@ -47,14 +49,15 @@ public class TouristVoucherXMLCreator {
               .setCurrentDateTime()
               .setType("vacation")
               .setCountry("Spain")
-              .setDaysNights("7", "50")
+              .setMinDays(7)
+              .setMaxDays(8)
               .setTransport("Plane")
-              .setStars("5")
+              .setStars(5)
               .setFood("All Inclusive")
-              .setRoomType("2")
+              .setRoomType(RoomType.DOUBLE)
               .setAmenities("included")
-              .setCost("5000")
-              .setCurrency("EUR")
+              .setCost(5000)
+              .setCurrency(Currency.EUR)
               .build();
       addTouristVoucherElement(document, rootElement, vacation);
 
@@ -63,13 +66,15 @@ public class TouristVoucherXMLCreator {
               .setCurrentDateTime()
               .setType("excursion")
               .setCountry("Poland")
-              .setDaysNights("2", "3")
+              .setMinDays(2)
+              .setMaxDays(3)
               .setTransport("Bus")
-              .setStars("2")
+              .setStars(2)
               .setFood("BB")
-              .setRoomType("2")
+              .setRoomType(RoomType.SINGLE)
               .setAmenities("included")
-              .setCost("500")
+              .setCost(500)
+              .setCurrency(Currency.EUR)
               .build();
       addTouristVoucherElement(document, rootElement, excursion);
 
@@ -78,14 +83,17 @@ public class TouristVoucherXMLCreator {
               .setCurrentDateTime()
               .setType("weekend")
               .setCountry("Spain")
-              .setDaysNights("3", "4")
+              .setMinDays(7)
+              .setMaxDays(14)
               .setTransport("Plane")
-              .setStars("4")
+              .setStars(4)
               .setFood("HB")
-              .setRoomType("3")
+              .setRoomType(RoomType.DOUBLE)
               .setAmenities("included")
-              .setCost("3000")
+              .setCost(3000)
+              .setCurrency(Currency.USD)
               .build();
+
       addTouristVoucherElement(document, rootElement, weekend);
 
       TouristVoucher pilgrimage = new TouristVoucherBuilder()
@@ -93,14 +101,15 @@ public class TouristVoucherXMLCreator {
               .setCurrentDateTime()
               .setType("pilgrimage")
               .setCountry("Israel")
-              .setDaysNights("14", "21")
+              .setMinDays(14)
+              .setMaxDays(21)
               .setTransport("Diverse")
-              .setStars("3")
+              .setStars(3)
               .setFood("All Inclusive")
-              .setRoomType("4")
+              .setRoomType(RoomType.DOUBLE)
               .setAmenities("included")
-              .setCost("10000")
-              .setCurrency("ILS")
+              .setCost(10000)
+              .setCurrency(Currency.ILS)
               .build();
       addTouristVoucherElement(document, rootElement, pilgrimage);
 
@@ -109,51 +118,50 @@ public class TouristVoucherXMLCreator {
 
       try (FileOutputStream fos = new FileOutputStream("TouristVoucher.xml")) {
         transformer.transform(new DOMSource(document), new StreamResult(fos));
-      } catch (IOException e) {
+      } catch (TransformerException | IOException e) {
         logger.error("Error closing FileOutputStream", e);
+        throw new TouristVoucherException("Error creating XML document", e);
       }
 
       logger.info("TouristVoucher.xml created successfully.");
-    } catch (ParserConfigurationException | TransformerException e) {
+    } catch (ParserConfigurationException | TransformerException | TouristVoucherException e) {
       logger.error("Error creating XML document", e);
+      throw new TouristVoucherException("Error creating XML document", e);
     }
   }
 
-  private static void addTouristVoucherElement(Document document, Element parentElement, TouristVoucher voucher) {
-    Element touristVoucherElement = document.createElement("TouristVoucher");
-    parentElement.appendChild(touristVoucherElement);
+  private static void addTouristVoucherElement(Document document, Element parentElement, TouristVoucher voucher) throws TouristVoucherException {
+    try {
+      Element touristVoucherElement = document.createElement("TouristVoucher");
+      parentElement.appendChild(touristVoucherElement);
 
-    touristVoucherElement.setAttribute("id", voucher.getId());
-    addChildElement(document, touristVoucherElement, "Type", voucher.getType());
-    addChildElement(document, touristVoucherElement, "Country", voucher.getCountry());
-    addDaysNightsElement(document, touristVoucherElement, voucher.getMinDays(), voucher.getMaxDays());
-    addChildElement(document, touristVoucherElement, "Transport", voucher.getTransport());
-    addHotelCharacteristics(document, touristVoucherElement, voucher.getStars(), voucher.getFood(), voucher.getRoomType(), voucher.getAmenities());
-    addChildElement(document, touristVoucherElement, "Cost", voucher.getCost());
-    if (voucher.getCurrency() == null) {
-      touristVoucherElement.setAttribute("currency", "USD");
-    } else {
-      touristVoucherElement.setAttribute("currency", voucher.getCurrency());
+      touristVoucherElement.setAttribute("ID", String.valueOf(voucher.getID()));
+      addChildElement(document, touristVoucherElement, "Type", voucher.getType());
+      addChildElement(document, touristVoucherElement, "Country", voucher.getCountry());
+      addChildElement(document, touristVoucherElement, "MinDays", String.valueOf(voucher.getMinDays()));
+      addChildElement(document, touristVoucherElement, "MaxDays", String.valueOf(voucher.getMaxDays()));
+      addChildElement(document, touristVoucherElement, "Transport", voucher.getTransport());
+      addHotelCharacteristics(document, touristVoucherElement, String.valueOf(voucher.getStars()), voucher.getFood(), voucher.getRoomType().name(), voucher.getAmenities());
+      addChildElement(document, touristVoucherElement, "Cost", String.valueOf(voucher.getCost()));
+      touristVoucherElement.setAttribute("currency", voucher.getCurrency().name());
+      addChildElement(document, touristVoucherElement, "StartDate", voucher.getStartDate());
+
+      if (voucher.getCurrency() == null) {
+        touristVoucherElement.setAttribute("currency", "USD");
+      } else {
+        touristVoucherElement.setAttribute("currency", voucher.getCurrency().name());
+      }
+
+    } catch (Exception e) {
+      logger.error("Error adding TouristVoucher element", e);
+      throw new TouristVoucherException("Error adding TouristVoucher element", e);
     }
-    addChildElement(document, touristVoucherElement, "StartDate", voucher.getStartDate());
   }
 
   private static void addChildElement(Document document, Element parentElement, String elementName, String textContent) {
     Element childElement = document.createElement(elementName);
     childElement.setTextContent(textContent);
     parentElement.appendChild(childElement);
-  }
-
-  private static void addDaysNightsElement(Document document, Element parentElement, String minDays, String maxDays) {
-    Element daysNightsElement = document.createElement("DaysNights");
-
-    int maxDaysValue = (maxDays != null) ? Integer.parseInt(maxDays) : 0;
-    if (maxDaysValue > 30) {
-      maxDaysValue = 30;
-    }
-    daysNightsElement.setAttribute("MinDays", String.valueOf(minDays));
-    daysNightsElement.setAttribute("MaxDays", String.valueOf(maxDaysValue));
-    parentElement.appendChild(daysNightsElement);
   }
 
   private static void addHotelCharacteristics(Document document, Element parentElement, String stars, String food, String roomType, String amenities) {

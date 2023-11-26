@@ -1,0 +1,10 @@
+14:12:02.704 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+14:12:02.904 [main] INFO  com.karach.xmlproject.validator.XmlValidator - Validation successful.
+14:12:02.905 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD
+14:18:37.865 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+14:18:38.047 [main] INFO  com.karach.xmlproject.validator.XmlValidator - Validation successful.
+14:18:38.047 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD
+14:22:38.738 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+14:22:38.930 [main] INFO  com.karach.xmlproject.validator.XmlValidator - Validation successful.
+14:22:38.930 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD
+14:41:19.907 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.

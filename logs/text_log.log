@@ -1,3 +1,2 @@
-14:12:02.704 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
-14:12:02.904 [main] INFO  com.karach.xmlproject.validator.XmlValidator - Validation successful.
-14:12:02.905 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD
+16:49:46.098 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=114, type='WEEKEND', country='Spain', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}
+16:49:46.111 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=382, type='PILGRIMAGE', country='Israel', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}

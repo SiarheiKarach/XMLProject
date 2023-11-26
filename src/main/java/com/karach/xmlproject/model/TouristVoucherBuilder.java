@@ -22,7 +22,7 @@ public class TouristVoucherBuilder {
 
   public TouristVoucherBuilder generateRandomId() {
     Random random = new Random();
-    touristVoucher.setID(random.nextInt(1,1000));
+    touristVoucher.setId(random.nextInt(1,1000));
     return this;
   }
 
@@ -32,7 +32,7 @@ public class TouristVoucherBuilder {
     return this;
   }
 
-  public TouristVoucherBuilder setType(String type) {
+  public TouristVoucherBuilder setType(Type type) {
     touristVoucher.setType(type);
     return this;
   }
@@ -52,17 +52,17 @@ public class TouristVoucherBuilder {
     return this;
   }
 
-  public TouristVoucherBuilder setTransport(String transport) {
+  public TouristVoucherBuilder setTransport(Transport transport) {
     touristVoucher.setTransport(transport);
     return this;
   }
 
-  public TouristVoucherBuilder setStars(int stars) {
+  public TouristVoucherBuilder setStars(Stars stars) {
     touristVoucher.setStars(stars);
     return this;
   }
 
-  public TouristVoucherBuilder setFood(String food) {
+  public TouristVoucherBuilder setFood(Food food) {
     touristVoucher.setFood(food);
     return this;
   }

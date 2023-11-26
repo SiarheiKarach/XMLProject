@@ -1,6 +1,5 @@
 package com.karach.xmlproject.model;
 
 public enum RoomType {
-  SINGLE,
-  DOUBLE
+  SINGLE,  DOUBLE, TRIPLE,QUAD,QUEEN
 }

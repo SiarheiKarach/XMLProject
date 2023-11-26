@@ -1,48 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="http://www.karach.com/tourist-voucher"
-            targetNamespace="http://www.karach.com/tourist-voucher"
-            elementFormDefault="qualified"
-            attributeFormDefault="unqualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.karach.com/tourist-voucher"
+           xmlns="http://www.karach.com/tourist-voucher"
+           elementFormDefault="qualified">
 
-  <xsd:complexType name="HotelCharacteristicsType">
-    <xsd:sequence>
-      <xsd:element name="Stars" type="xsd:integer"/>
-      <xsd:element name="Food" type="xsd:string"/>
-      <xsd:element name="RoomType" type="RoomType"/>
-      <xsd:element name="Amenities" type="xsd:string"/>
-    </xsd:sequence>
-  </xsd:complexType>
+    <xs:simpleType name="RoomType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SINGLE"/>
+            <xs:enumeration value="DOUBLE"/>
+            <xs:enumeration value="TRIPLE"/>
+            <xs:enumeration value="QUAD"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-  <xsd:simpleType name="RoomType">
-    <xsd:restriction base="xsd:string">
-      <xsd:enumeration value="SINGLE"/>
-      <xsd:enumeration value="DOUBLE"/>
+    <xs:simpleType name="Stars">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="ONE"/>
+            <xs:enumeration value="TWO"/>
+            <xs:enumeration value="THREE"/>
+            <xs:enumeration value="FOUR"/>
+            <xs:enumeration value="FIVE"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-    </xsd:restriction>
-  </xsd:simpleType>
+    <xs:simpleType name="Food">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="AL"/>
+            <xs:enumeration value="BB"/>
+            <xs:enumeration value="HB"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-  <xsd:complexType name="TouristVoucherType">
-    <xsd:sequence>
-      <xsd:element name="Type" type="xsd:string"/>
-      <xsd:element name="Country" type="xsd:string"/>
-      <xsd:element name="MinDays" type="xsd:integer"/>
-      <xsd:element name="MaxDays" type="xsd:integer"/>
-      <xsd:element name="Transport" type="xsd:string"/>
-      <xsd:element name="HotelCharacteristics" type="HotelCharacteristicsType"/>
-      <xsd:element name="Cost" type="xsd:decimal"/>
-      <xsd:element name="StartDate" type="xsd:dateTime"/>
-    </xsd:sequence>
-    <xsd:attribute name="ID" type="xsd:integer" use="required"/>
-    <xsd:attribute name="currency" type="xsd:string" default="USD"/>
-  </xsd:complexType>
+    <xs:simpleType name="Transport">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PLANE"/>
+            <xs:enumeration value="BUS"/>
+            <xs:enumeration value="BOAT"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-  <xsd:element name="TouristVouchers">
-    <xsd:complexType>
-      <xsd:sequence>
-        <xsd:element name="TouristVoucher" type="TouristVoucherType" maxOccurs="unbounded"/>
-      </xsd:sequence>
-    </xsd:complexType>
-  </xsd:element>
+    <xs:simpleType name="Type">
+        <xs:restriction base="xs:ID">
+            <xs:pattern value="(VACATION|EXCURSION|WEEKEND|PILGRIMAGE)"/>
+        </xs:restriction>
+    </xs:simpleType>
 
-</xsd:schema>
+    <xs:element name="TouristVouchers">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TouristVoucher" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Type" type="Type"/>
+                            <xs:element name="Country" type="xs:string"/>
+                            <xs:element name="MinDays" type="xs:integer"/>
+                            <xs:element name="MaxDays" type="xs:integer"/>
+                            <xs:element name="Transport" type="xs:string"/>
+                            <xs:element name="HotelCharacteristics">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="Stars" type="Stars"/>
+                                        <xs:element name="Food" type="Food"/>
+                                        <xs:element name="RoomType" type="RoomType"/>
+                                        <xs:element name="Amenities" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Cost" type="xs:decimal"/>
+                            <xs:element name="StartDate" type="xs:string"/>
+                        </xs:sequence>
+                        <xs:attribute name="id" type="xs:integer" use="required"/>
+                        <xs:attribute name="currency" type="xs:string" use="optional" default="USD"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

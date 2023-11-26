@@ -1,16 +1,17 @@
 package com.karach.xmlproject.model;
-
+import com.karach.xmlproject.model.Type;
 import java.time.format.DateTimeFormatter;
+import java.util.UUID;
 
 public class TouristVoucher {
-  private int ID;
-  private String type;
+  private int id;
+  private Type type;
   private String country;
   private int minDays;
   private int maxDays;
-  private String transport;
-  private int stars;
-  private String food;
+  private Transport transport;
+  private Stars stars;
+  private Food food;
   private RoomType roomType;
   private String amenities;
   private float cost;
@@ -21,26 +22,26 @@ public class TouristVoucher {
     return DateTimeFormatter.ISO_INSTANT;
   }
 
-  public void setHotelCharacteristics(int stars, String food, RoomType roomType, String amenities) {
+  public void setHotelCharacteristics(Stars stars, Food food, RoomType roomType, String amenities) {
     this.stars = stars;
     this.food = food;
     this.roomType = roomType;
     this.amenities = amenities;
   }
 
-  public int getID() {
-    return ID;
+  public int getId() {
+    return id;
   }
 
-  public void setID(int ID) {
-    this.ID = ID;
+  public void setId(int id) {
+    this.id = id;
   }
 
-  public String getType() {
+  public Type getType() {
     return type;
   }
 
-  public void setType(String type) {
+  public void setType(Type type) {
     this.type = type;
   }
 
@@ -68,27 +69,27 @@ public class TouristVoucher {
     this.maxDays = maxDays;
   }
 
-  public String getTransport() {
+  public Transport getTransport() {
     return transport;
   }
 
-  public void setTransport(String transport) {
+  public void setTransport(Transport transport) {
     this.transport = transport;
   }
 
-  public int getStars() {
+  public Stars getStars() {
     return stars;
   }
 
-  public void setStars(int stars) {
+  public void setStars(Stars stars) {
     this.stars = stars;
   }
 
-  public String getFood() {
+  public Food getFood() {
     return food;
   }
 
-  public void setFood(String food) {
+  public void setFood(Food food) {
     this.food = food;
   }
 
@@ -135,7 +136,7 @@ public class TouristVoucher {
   @Override
   public String toString() {
     return "TouristVoucher{" +
-            "ID=" + ID +
+            "id=" + id +
             ", type='" + type + '\'' +
             ", country='" + country + '\'' +
             ", minDays=" + minDays +

@@ -1,0 +1,24 @@
+12:24:57.521 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+12:24:57.656 [main] ERROR com.karach.xmlproject.main.Main - Error creating or validating XML document
+com.karach.xmlproject.exception.TouristVoucherException: Error validating XML against XSD
+	at com.karach.xmlproject.validator.XmlValidator.validateXmlAgainstXsd(XmlValidator.java:25) ~[classes/:?]
+	at com.karach.xmlproject.main.Main.main(Main.java:19) [classes/:?]
+Caused by: org.xml.sax.SAXParseException: s4s-elt-must-match.1: The content of 'TouristVoucher' must match (annotation?, (simpleType | complexType)?, (unique | key | keyref)*)). A problem was found starting at: attribute.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204) ~[?:?]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4254) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4237) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDAbstractTraverser.reportSchemaError(XSDAbstractTraverser.java:866) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDElementTraverser.traverseNamedElement(XSDElementTraverser.java:468) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDElementTraverser.traverseLocal(XSDElementTraverser.java:194) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.traverseLocalElements(XSDHandler.java:3707) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:666) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:618) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:577) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:543) ~[?:?]
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:281) ~[?:?]
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:612) ~[?:?]
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:628) ~[?:?]
+	at com.karach.xmlproject.validator.XmlValidator.validateXmlAgainstXsd(XmlValidator.java:19) ~[classes/:?]
+	... 1 more

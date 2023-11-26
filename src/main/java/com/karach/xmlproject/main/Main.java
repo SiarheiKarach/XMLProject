@@ -19,7 +19,7 @@ public class Main {
       if (XmlValidator.validateXmlAgainstXsd(xmlFile, xsdFile)) {
         logger.info("XML is in line with XSD");
       } else {
-        logger.info("XML is not in line with XSD");
+        logger.error("XML is not in line with XSD");
       }
     } catch (TouristVoucherException e) {
       logger.error("Error creating or validating XML document", e);

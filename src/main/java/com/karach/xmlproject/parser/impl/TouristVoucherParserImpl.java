@@ -1,9 +1,7 @@
 package com.karach.xmlproject.parser.impl;
 
 import com.karach.xmlproject.exception.TouristVoucherException;
-import com.karach.xmlproject.model.Currency;
-import com.karach.xmlproject.model.RoomType;
-import com.karach.xmlproject.model.TouristVoucher;
+import com.karach.xmlproject.model.*;
 import com.karach.xmlproject.parser.TouristVoucherParser;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,6 +11,7 @@ import org.w3c.dom.NodeList;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class TouristVoucherParserImpl implements TouristVoucherParser {
 
@@ -40,19 +39,19 @@ public class TouristVoucherParserImpl implements TouristVoucherParser {
     TouristVoucher voucher = new TouristVoucher();
 
     try {
-      voucher.setID(Integer.parseInt(voucherElement.getAttribute("ID")));
-      voucher.setType(getElementTextContent(voucherElement, "Type"));
+      voucher.setId(Integer.parseInt(voucherElement.getAttribute("id")));
+      voucher.setType(Type.valueOf(voucherElement.getAttribute("Type")));
       voucher.setCountry(getElementTextContent(voucherElement, "Country"));
       voucher.setMinDays(Integer.parseInt(voucherElement.getAttribute("MinDays")));
       voucher.setMaxDays(Integer.parseInt(voucherElement.getAttribute("MaxDays")));
-      voucher.setTransport(getElementTextContent(voucherElement, "Transport"));
+      voucher.setTransport(Transport.valueOf(getElementTextContent(voucherElement, "Transport")));
 
       Element hotelCharacteristicsElement = (Element) voucherElement.getElementsByTagName("HotelCharacteristics").item(0);
-      int stars = Integer.parseInt(getElementTextContent(hotelCharacteristicsElement, "Stars"));
+      String stars = getElementTextContent(hotelCharacteristicsElement, "Stars");
       String food = getElementTextContent(hotelCharacteristicsElement, "Food");
       RoomType roomType = RoomType.valueOf(getElementTextContent(hotelCharacteristicsElement, "RoomType"));
       String amenities = getElementTextContent(hotelCharacteristicsElement, "Amenities");
-      voucher.setHotelCharacteristics(stars, food, roomType, amenities);
+      voucher.setHotelCharacteristics(Stars.valueOf(stars), Food.valueOf(food), roomType, amenities);
       voucher.setCost(Float.parseFloat(getElementTextContent(voucherElement, "Cost")));
       voucher.setCurrency(Currency.valueOf(voucherElement.getAttribute("currency")));
       voucher.setStartDate(getElementTextContent(voucherElement, "StartDate"));

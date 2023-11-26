@@ -15,6 +15,7 @@ public class XmlValidator {
 
   public static boolean validateXmlAgainstXsd(File xmlFile, File xsdFile) throws TouristVoucherException {
     try {
+
       SchemaFactory factory = SchemaFactory.newInstance("http://www.w3.org/2001/XMLSchema");
       Schema schema = factory.newSchema(xsdFile);
       Validator validator = schema.newValidator();
@@ -22,6 +23,7 @@ public class XmlValidator {
       logger.info("Validation successful.");
       return true;
     } catch (SAXException | IOException e) {
+      logger.error("Error validating XML against XSD", e);
       throw new TouristVoucherException("Error validating XML against XSD", e);
     }
   }

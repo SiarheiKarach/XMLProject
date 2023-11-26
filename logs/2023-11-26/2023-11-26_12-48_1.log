@@ -1,0 +1,27 @@
+12:47:57.847 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+12:47:57.997 [main] ERROR com.karach.xmlproject.main.Main - Error creating or validating XML document
+com.karach.xmlproject.exception.TouristVoucherException: Error validating XML against XSD
+	at com.karach.xmlproject.validator.XmlValidator.validateXmlAgainstXsd(XmlValidator.java:25) ~[classes/:?]
+	at com.karach.xmlproject.main.Main.main(Main.java:19) [classes/:?]
+Caused by: org.xml.sax.SAXParseException: s4s-elt-must-match.1: The content of 'sequence' must match (annotation?, (element | group | choice | sequence | any)*). A problem was found starting at: attribute.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204) ~[?:?]
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4254) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4237) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDAbstractTraverser.reportSchemaError(XSDAbstractTraverser.java:866) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDAbstractParticleTraverser.traverseSeqChoice(XSDAbstractParticleTraverser.java:261) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDAbstractParticleTraverser.traverseSequence(XSDAbstractParticleTraverser.java:160) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDComplexTypeTraverser.processComplexContent(XSDComplexTypeTraverser.java:1043) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDComplexTypeTraverser.traverseComplexTypeDecl(XSDComplexTypeTraverser.java:335) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDComplexTypeTraverser.traverseGlobal(XSDComplexTypeTraverser.java:191) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.traverseSchemas(XSDHandler.java:1480) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:663) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:618) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:577) ~[?:?]
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:543) ~[?:?]
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:281) ~[?:?]
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:612) ~[?:?]
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:628) ~[?:?]
+	at com.karach.xmlproject.validator.XmlValidator.validateXmlAgainstXsd(XmlValidator.java:19) ~[classes/:?]
+	... 1 more

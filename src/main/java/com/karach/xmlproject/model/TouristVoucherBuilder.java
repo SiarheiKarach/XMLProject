@@ -87,6 +87,11 @@ public class TouristVoucherBuilder {
     return this;
   }
 
+  public TouristVoucherBuilder setId(int id) {
+    touristVoucher.setId(id);
+    return this;
+  }
+
   public TouristVoucher build() {
     return touristVoucher;
   }

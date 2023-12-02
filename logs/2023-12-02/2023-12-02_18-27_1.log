@@ -1,0 +1,7 @@
+18:24:28.913 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD
+18:24:28.954 [main] INFO  com.karach.xmlproject.main.Main - 
+SAX Parser Result:
+18:24:28.971 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=179, type='VACATION', country='Spain', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}
+18:24:28.971 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=693, type='EXCURSION', country='Poland', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}
+18:24:28.971 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=412, type='WEEKEND', country='Spain', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}
+18:24:28.972 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=618, type='PILGRIMAGE', country='Israel', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}

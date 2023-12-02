@@ -29,6 +29,7 @@ public class TouristVoucherXMLCreator {
   private static final DateTimeFormatter DATE_TIME_FORMATTER = DateTimeFormatter.ISO_INSTANT;
   private static final String XML_NAMESPACE = "http://www.karach.com/tourist-voucher";
   private static final String XSD_SCHEMA_LOCATION = "TouristVoucher.xsd";
+  private static final String XML = "./src/main/resources/TouristVoucher.xml";
 
   public static void createXmlDocument() throws TouristVoucherException {
     try {
@@ -113,7 +114,7 @@ public class TouristVoucherXMLCreator {
       Transformer transformer = TransformerFactory.newInstance().newTransformer();
       transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
-      try (FileOutputStream fos = new FileOutputStream("TouristVoucher.xml")) {
+      try (FileOutputStream fos = new FileOutputStream(XML)) {
         transformer.transform(new DOMSource(document), new StreamResult(fos));
       } catch (TransformerException | IOException e) {
         logger.error("Error closing FileOutputStream", e);

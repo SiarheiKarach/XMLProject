@@ -1,0 +1,9 @@
+20:46:58.255 [main] INFO  com.karach.xmlproject.main.Main - 
+StAX Parser Result:
+21:29:43.622 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+21:29:43.792 [main] INFO  com.karach.xmlproject.validator.XmlValidator - Validation successful.
+21:29:43.793 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD
+21:29:43.818 [main] INFO  com.karach.xmlproject.main.Main - 
+StAX Parser Result:
+21:29:43.859 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=860, type='VACATION', country='Spain', minDays=7, maxDays=8, transport='PLANE', stars=FIVE, food='AL', roomType=DOUBLE, amenities='included', cost=5000.0, currency=null, startDate='2023-12-02T20:29:43.816647900Z'}
+21:29:43.860 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=465, type='EXCURSION', country='Poland', minDays=2, maxDays=3, transport='BUS', stars=TWO, food='BB', roomType=SINGLE, amenities='included', cost=500.0, currency=null, startDate='2023-12-02T20:29:43.817646400Z'}

@@ -1,0 +1,9 @@
+19:44:44.052 [main] INFO  com.karach.xmlproject.validator.XmlValidator - Validation successful.
+19:44:44.065 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD
+19:57:00.810 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+19:57:00.993 [main] INFO  com.karach.xmlproject.validator.XmlValidator - Validation successful.
+19:57:00.994 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD
+19:57:01.061 [main] INFO  com.karach.xmlproject.main.Main - 
+SAX Parser Result:
+19:57:01.099 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=869, type='VACATION', country='Spain', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}
+19:57:01.108 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=320, type='EXCURSION', country='Poland', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}

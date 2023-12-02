@@ -1,0 +1,6 @@
+21:55:13.865 [main] INFO  com.karach.xmlproject.main.Main - 
+SAX Parser Result:
+21:55:13.918 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=22, type='VACATION', country='Spain', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}
+21:55:13.919 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=839, type='EXCURSION', country='Poland', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}
+21:55:13.919 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=313, type='WEEKEND', country='Spain', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}
+21:55:13.920 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=767, type='PILGRIMAGE', country='Israel', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}

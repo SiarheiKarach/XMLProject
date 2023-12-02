@@ -25,7 +25,7 @@
     @Override
     public List<TouristVoucher> parse(Element rootElement) throws TouristVoucherException {
       List<TouristVoucher> touristVouchers = new ArrayList<>();
-      NodeList voucherNodes = rootElement.getElementsByTagName("TouristVoucher");
+      NodeList voucherNodes = rootElement.getElementsByTagName(XmlElement.TOURIST_VOUCHER.getValue());
       for (int i = 0; i < voucherNodes.getLength(); i++) {
         Element voucherElement = (Element) voucherNodes.item(i);
         try {
@@ -43,22 +43,22 @@
     private TouristVoucher parseVoucherElement(Element voucherElement) throws IOException, TouristVoucherException {
       TouristVoucher voucher = new TouristVoucher();
 
-      voucher.setId(Integer.parseInt(voucherElement.getAttribute("id")));
-      voucher.setType(Type.valueOf(voucherElement.getAttribute("Type")));
-      voucher.setCountry(getElementTextContent(voucherElement, "Country"));
-      voucher.setMinDays(Integer.parseInt(voucherElement.getAttribute("MinDays")));
-      voucher.setMaxDays(Integer.parseInt(voucherElement.getAttribute("MaxDays")));
-      voucher.setTransport(Transport.valueOf(getElementTextContent(voucherElement, "Transport")));
+      voucher.setId(Integer.parseInt(voucherElement.getAttribute(XmlElement.TYPE.getValue())));
+      voucher.setType(Type.valueOf(voucherElement.getAttribute(XmlElement.TYPE.getValue())));
+      voucher.setCountry(getElementTextContent(voucherElement, XmlElement.COUNTRY.getValue()));
+      voucher.setMinDays(Integer.parseInt(voucherElement.getAttribute(XmlElement.MIN_DAYS.getValue())));
+      voucher.setMaxDays(Integer.parseInt(voucherElement.getAttribute(XmlElement.MAX_DAYS.getValue())));
+      voucher.setTransport(Transport.valueOf(getElementTextContent(voucherElement, XmlElement.TRANSPORT.getValue())));
 
-      Element hotelCharacteristicsElement = (Element) voucherElement.getElementsByTagName("HotelCharacteristics").item(0);
-      String stars = getElementTextContent(hotelCharacteristicsElement, "Stars");
-      String food = getElementTextContent(hotelCharacteristicsElement, "Food");
-      RoomType roomType = RoomType.valueOf(getElementTextContent(hotelCharacteristicsElement, "RoomType"));
-      String amenities = getElementTextContent(hotelCharacteristicsElement, "Amenities");
+      Element hotelCharacteristicsElement = (Element) voucherElement.getElementsByTagName(XmlElement.HOTEL_CHARACTERISTICS.getValue()).item(0);
+      String stars = getElementTextContent(hotelCharacteristicsElement, XmlElement.STARS.getValue());
+      String food = getElementTextContent(hotelCharacteristicsElement, XmlElement.FOOD.getValue());
+      RoomType roomType = RoomType.valueOf(getElementTextContent(hotelCharacteristicsElement, XmlElement.ROOM_TYPE.getValue()));
+      String amenities = getElementTextContent(hotelCharacteristicsElement, XmlElement.AMENITIES.getValue());
       voucher.setHotelCharacteristics(Stars.valueOf(stars), Food.valueOf(food), roomType, amenities);
-      voucher.setCost(Float.parseFloat(getElementTextContent(voucherElement, "Cost")));
-      voucher.setCurrency(Currency.valueOf(voucherElement.getAttribute("currency")));
-      voucher.setStartDate(getElementTextContent(voucherElement, "StartDate"));
+      voucher.setCost(Float.parseFloat(getElementTextContent(voucherElement, XmlElement.COST.getValue())));
+      voucher.setCurrency(Currency.valueOf(voucherElement.getAttribute(XmlElement.CURRENCY.getValue())));
+      voucher.setStartDate(getElementTextContent(voucherElement, XmlElement.START_DATE.getValue()));
 
       return voucher;
     }

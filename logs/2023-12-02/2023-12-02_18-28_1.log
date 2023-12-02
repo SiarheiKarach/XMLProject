@@ -1,0 +1,8 @@
+18:27:48.415 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=382, type='PILGRIMAGE', country='Israel', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}
+18:28:06.547 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+18:28:06.680 [main] INFO  com.karach.xmlproject.validator.XmlValidator - Validation successful.
+18:28:06.680 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD
+18:28:06.689 [main] INFO  com.karach.xmlproject.main.Main - 
+SAX Parser Result:
+18:28:06.718 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=981, type='VACATION', country='Spain', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}
+18:28:06.723 [main] INFO  com.karach.xmlproject.main.Main - TouristVoucher{id=981, type='EXCURSION', country='Poland', minDays=0, maxDays=0, transport='null', stars=null, food='null', roomType=null, amenities='null', cost=0.0, currency=null, startDate='null'}

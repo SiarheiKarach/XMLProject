@@ -1,0 +1,10 @@
+20:46:57.960 [main] INFO  com.karach.xmlproject.creator.TouristVoucherXMLCreator - TouristVoucher.xml created successfully.
+20:46:58.163 [main] INFO  com.karach.xmlproject.validator.XmlValidator - Validation successful.
+20:46:58.164 [main] INFO  com.karach.xmlproject.main.Main - XML is in line with XSD
+20:46:58.204 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: TouristVouchers
+20:46:58.205 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: TouristVoucher
+20:46:58.205 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: Type
+20:46:58.206 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: Country
+20:46:58.206 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: MinDays
+20:46:58.207 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: MaxDays
+20:46:58.207 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: Transport

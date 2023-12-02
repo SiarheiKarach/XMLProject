@@ -1,0 +1,10 @@
+20:46:58.234 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: Stars
+20:46:58.240 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: Food
+20:46:58.241 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: RoomType
+20:46:58.241 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: Amenities
+20:46:58.241 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: Cost
+20:46:58.242 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: StartDate
+20:46:58.242 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: TouristVoucher
+20:46:58.243 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: Type
+20:46:58.244 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: Country
+20:46:58.244 [main] WARN  karach.xmlproject.parser.impl.StaxTouristVoucherParserImpl - Unknown element: MinDays
